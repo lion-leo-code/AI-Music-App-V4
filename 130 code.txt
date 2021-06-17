@@ -1,0 +1,20 @@
+    fill("#FFFFFF");
+stroke("#008080");
+if(rightWristScores > 0.01){
+    circle(rightWristX, rightWristY, 30);
+    NumberRightWrist = Number(rightWristY);
+    NoDecimal = floor(NumberRightWrist);
+    
+    if(NumberRightWrist > 0 && NumberRightWrist < 250){
+    song.pause();
+    song = "Faded Sountrack.mp3";
+    document.getElementById("song_img").src = "Faded Cover.jpg";
+    document.getElementById("song").innerHTML = "Faded" + '<br>'  + "- Alan Walker";
+    }
+    else if(NumberRightWrist > 250 && NumberRightWrist < 500){
+    song.pause();
+    song = "What Makes you Beautiful Soundtrack.mp3";
+    document.getElementById("song_img").src = "What_Makes_You_Beautiful Cover.jpg";
+    document.getElementById("song").innerHTML = "What Makes You Beautiful" + '<br>'  + "- One Direction";
+    }
+}
